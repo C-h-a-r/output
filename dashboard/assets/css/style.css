@@ -6,6 +6,7 @@ background-color: #1A1A1D;
 color: #FFFF;
 font-family: 'Lexend Deca', sans-serif;
 overflow-x: hidden;
+display: block;
 }
 
 .neonText {
@@ -55,36 +56,21 @@ canvas {
 
 .mainCoverText {
   position: absolute;
-  font-size: 600%;
   margin-top: 15%;
-  margin-left: 30%;
   font-family: 'Kanit', sans-serif;
   animation: flicker 1.5s infinite alternate;
+  font-size:10vw
 }
 
 .slogan {
   margin-top: 25%;
   color: rgb(104, 104, 104);
   position: absolute;
-  margin-left: 40%;
+
 }
 
 
-@media (max-width: 479px) {
- .mainCoverText {
-  font-size: 300%;
-  margin-top: 40%;
-  margin-left: 10%;
- }
 
- .slogan {
-  margin-top: 60%;
-  color: rgb(104, 104, 104);
-  position: absolute;
-  margin-left: 15%;
-  font-size: 90%;
-}
-}
 
 #navBranding {
   margin-left: 2%;
@@ -95,7 +81,7 @@ canvas {
     0 0 5px #950740,
     0 0 7px #C3073F,
     0 0 8px #C3073F;
-
+font-size: 2vw;
 }
 .team-section {
   width: 100%;
@@ -153,4 +139,63 @@ html {
   background: #C3073F;
   border-radius: 5px;
   
+}
+
+
+
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }

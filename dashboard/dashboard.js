@@ -219,20 +219,28 @@ module.exports = async (client) => {
     });
   });
 
+
+
+  app.get("/admin", checkAuth, (req, res) => {
+    if (req.user.id !== "829112572816130058") return res.redirect("/");
+
+    const guild = client.guilds.cache.get("988175675187929168");
+
+    renderTemplate(res, req, "admin.ejs", {
+      discordInvite: config.discordInvite,
+      guild,
+    });
+
+ })
+
   app.use(function(req,res){
     res.status(404).render(__dirname + '/templates/404.ejs');
 });
 
-  app.get("/admin-panel", checkAuth, (req, res) => {
-     if (req.user.id !== "829112572816130058") return res.redirect("/");
-
-     res.send(200)
-  })
 
 
-  app.get("/discord-join", (req, res) => {
-    res.redirect(`${config.discordInvite}`)
-  });
+
+
   
   app.listen(config.port, null, null, () =>
     console.log(`Dashboard is up and running on port ${config.port}.`),
