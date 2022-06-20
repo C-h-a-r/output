@@ -1,0 +1,45 @@
+{
+  "name": "simple-discordjs-dashboard",
+  "version": "1.0.0",
+  "description": "A simple discord bot dashboard which focuses on the dashboard itself.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAugu/discord-bot-dashboard.git"
+  },
+  "keywords": [
+    "discord.js",
+    "bot",
+    "dashboard"
+  ],
+  "author": "MrAugu#7917",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrAugu/discord-bot-dashboard/issues"
+  },
+  "homepage": "https://github.com/MrAugu/discord-bot-dashboard#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "discord.js": "^13.8.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-session": "^1.17.3",
+    "memorystore": "^1.6.7",
+    "mongoose": "^5.13.14",
+    "parabox.js": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7",
+    "tsparticles-engine": "^2.0.6",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "nodemon": "^2.0.16",
+    "string-width": "^4.2.3"
+  }
+}
