@@ -221,18 +221,6 @@ module.exports = async (client) => {
 
 
 
-  app.get("/admin", checkAuth, (req, res) => {
-    if (req.user.id !== "829112572816130058") return res.redirect("/");
-
-    const guild = client.guilds.cache.get("988175675187929168");
-
-    renderTemplate(res, req, "admin.ejs", {
-      discordInvite: config.discordInvite,
-      guild,
-    });
-
- })
-
   app.use(function(req,res){
     res.status(404).render(__dirname + '/templates/404.ejs');
 });

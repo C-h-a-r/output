@@ -6,8 +6,8 @@ module.exports = {
   usingCustomDomain: false, // Use a custom domain for the bot
   domain: "http://localhost", // Custom domain
   discordInvite: "https://discord.gg/yEPQkx2QvD", // Discord Invite URLL
-  clientSecret: "agP9pow-1jYPZ4DN1gni8KsgnxqMDN_9", // Client Secret from Discord Application
-  token: "OTg4MTY1NDY0ODIxNzI3MzEy.G8fgRC.hxwldiBX4TYJwLGzDDmXV-OGys2Hd6p2jZ6i24", // Bot Token from Discord Application
+  clientSecret: "", // Client Secret from Discord Application
+  token: "", // Bot Token from Discord Application
 };
 
 /**
